@@ -1,0 +1,23 @@
+<table>
+<tr>
+<td><strong>Name</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Address</strong></td>
+<td><strong>Phone Number</strong></td>
+<td><strong>Details</strong></td>
+<td><strong>Edit</strong></td>
+</tr>
+
+<% @restaurants.each do |r|%>
+<tr>
+<td><%= r.name %></td>
+<td><%= r.description %></td>
+<td><%= r.address %></td>
+<td><%= r.phone_number %></td>
+<td><%= link_to "Details", r %></td>
+<td><%= link_to "Edit", edit_restaurant_path(r) %></td>
+</tr>
+<% end %>
+</table>
+
+<%= link_to "Add New Restaurant", :action => :new %>

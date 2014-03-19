@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+restaurant_no_name:
+ phone_number: test number
+ description: test description
+ address: test address
+
+restaurant_no_phone:
+ name: test name
+ description: test description
+ address: test address
