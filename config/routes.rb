@@ -1,11 +1,13 @@
 Reservester::Application.routes.draw do
+  devise_for :owners
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
   resources :restaurants
   
   get "/" => "restaurants#index"
-  
+  root to: "restaurants#index"
+ 
   
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

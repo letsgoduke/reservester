@@ -11,11 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140317191134) do
+ActiveRecord::Schema.define(version: 20140319192049) do
 
   create_table "owners", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -26,7 +24,6 @@ ActiveRecord::Schema.define(version: 20140317191134) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "username"
   end
 
   add_index "owners", ["email"], name: "index_owners_on_email", unique: true
