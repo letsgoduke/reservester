@@ -1,4 +1,6 @@
 class RestaurantsController < ApplicationController
+	 before_action :authenticate_owner!, only: [:edit, :new]
+	
 	def index
 		@restaurants = Restaurant.all
 	end
@@ -7,10 +9,12 @@ class RestaurantsController < ApplicationController
 		@restaurant = Restaurant.find(params[:id])
 	end
 	
+	before_action 
 	def new
 		@restaurant = Restaurant.new
 	end
 	
+
 	def create
 		@restaurant = Restaurant.new(restaurant_params)
 		if @restaurant.save
